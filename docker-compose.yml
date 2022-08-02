@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+# APサーバーコンテナの作成
+  app:
+    build: ./infra/php
+    volumes:
+      - ./src:/data
