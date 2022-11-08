@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 Route::get('/hello', 'App\Http\Controllers\HelloController@index');
 Route::get('/hello/jndex', 'App\Http\Controllers\HelloController@jndex');
+Route::domain('example.com')->group(function () {
+    Route::get('/hello/jndex', 'App\Http\Controllers\HelloController@jndex');
+});
